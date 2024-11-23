@@ -12,16 +12,6 @@ export default function MainScreen({ handleClick, userInput, data }) {
         </button>
       </div>
       <div className="container">
-        {/* <div className="search">
-          <input
-            type="text"
-            placeholder="Enter Location..."
-            ref={userInput}
-          ></input>
-          <button className="btn" onClick={handleClick}>
-            >
-          </button>
-        </div> */}
         <div className="top">
           <div className="location">
             <p>{data.name}</p>
