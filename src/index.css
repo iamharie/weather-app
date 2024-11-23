@@ -118,5 +118,6 @@ h1 {
 }
 
 .bold {
+  font-size: 1rem;
   font-weight: 700;
 }
