@@ -33,26 +33,26 @@ export default function MainScreen({ handleClick, userInput, data }) {
             {data.weather ? <p>{data.weather[0].main}</p> : null}
           </div>
         </div>
-        {/* {data.name !== undefined && ( */}
-        <div className="bottom">
-          <div className="feels">
-            {data.main ? (
-              <p className="bold">{data.main.feels_like.toFixed()}°F</p>
-            ) : null}
-            <p className="bold">Feels Like</p>
+        {data.name !== undefined && (
+          <div className="bottom">
+            <div className="feels">
+              {data.main ? (
+                <p className="bold">{data.main.feels_like.toFixed()}°F</p>
+              ) : null}
+              <p className="bold">Feels Like</p>
+            </div>
+            <div className="humidity">
+              {data.main ? <p className="bold">{data.main.humidity}%</p> : null}
+              <p className="bold">Humidity</p>
+            </div>
+            <div className="wind">
+              {data.wind ? (
+                <p className="bold">{data.wind.speed.toFixed()} MPH</p>
+              ) : null}
+              <p className="bold">Wind Speed</p>
+            </div>
           </div>
-          <div className="humidity">
-            {data.main ? <p className="bold">{data.main.humidity}%</p> : null}
-            <p className="bold">Humidity</p>
-          </div>
-          <div className="wind">
-            {data.wind ? (
-              <p className="bold">{data.wind.speed.toFixed()} MPH</p>
-            ) : null}
-            <p className="bold">Wind Speed</p>
-          </div>
-        </div>
-        {/* )} */}
+        )}
       </div>
     </div>
   );
