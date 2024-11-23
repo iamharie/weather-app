@@ -1,4 +1,4 @@
-## Weather App
+# Weather Application
+[Visit HariCast](https://haricast.netlify.app/)
 
-*Tech Stack: React, JavaScript, HTML, CSS
-*Transpilation and Bundling: Vite
+## ![UI](public/images/UI-Screenshot.png)
