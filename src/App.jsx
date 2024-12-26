@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import MainScreen from "./MainScreen.jsx";
+import { weatherData } from "./util.js";
 
 function App() {
   // const [loading, isLoading] = useState(false);
@@ -14,9 +15,8 @@ function App() {
     setLocation(inputLocation);
     userInput.current.value = "";
   }
-
-  const apiKey = import.meta.env.VITE_API_KEY;
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${apiKey}`;
+  // const weather = data;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${weatherData}`;
 
   useEffect(() => {
     if (!location) return;
@@ -28,7 +28,7 @@ function App() {
         }
         const responseData = await response.json();
         setData(responseData);
-        console.log(responseData);
+        // console.log(responseData);
       } catch (error) {
         setError(error.message);
       }
