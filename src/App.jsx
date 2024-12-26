@@ -15,7 +15,8 @@ function App() {
     userInput.current.value = "";
   }
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=aa601f7e782dc02a2ada20a7a1d64043`;
+  const apiKey = import.meta.env.VITE_API_KEY;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${apiKey}`;
 
   useEffect(() => {
     if (!location) return;
